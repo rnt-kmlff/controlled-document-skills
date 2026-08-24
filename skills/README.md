@@ -1,6 +1,26 @@
 # Skills
 
-Agent skills that apply the ML System Design framework by Kravchenko and Babushkin. Compatible with Claude Code and other [Agent Skills](https://skills.sh) consumers.
+Agent skills for ML system design and controlled document workflows. Compatible with Codex, Claude Code, and other [Agent Skills](https://skills.sh) consumers.
+
+## controlled-doc-tighten
+
+Creates a separate, auditable tightening of a working-copy document. The skill defaults to keeping text, protects material facts and qualifiers, records every changed span, and uses deterministic forward/reverse reconstruction and structural checks for UTF-8 text and Markdown. It does not claim that model-edited prose is lossless or semantically equivalent.
+
+The skill is explicit-only. High-stakes narratives require human approval; operative or signed legal text, source evidence, payment or banking records, spreadsheets, and unverified OCR are blocked from automatic tightening. Native DOCX, Google Docs, and PDF work must use their native editing and QA workflows.
+
+### Install in Codex
+
+Ask Codex to install this repository path:
+
+```text
+https://github.com/rnt-kmlff/controlled-document-skills/tree/main/skills/controlled-doc-tighten
+```
+
+Restart Codex after installation so the skill is available in a new task.
+
+### Use
+
+Invoke `$controlled-doc-tighten` explicitly and provide an identified working copy. For file-backed UTF-8 text or Markdown, the skill returns a tightened copy, a complete edit manifest, a human-readable change log, a mechanical QA report, and any unresolved author decisions.
 
 ## ml-system-design-review
 

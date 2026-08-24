@@ -1,0 +1,7 @@
+interface:
+  display_name: "Controlled Document Tighten"
+  short_description: "Tighten documents with auditable fidelity checks"
+  default_prompt: "Use $controlled-doc-tighten to tighten this working-copy document without changing substance."
+
+policy:
+  allow_implicit_invocation: false
