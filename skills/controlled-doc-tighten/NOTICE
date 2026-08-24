@@ -1,0 +1,17 @@
+Controlled Document Tighten, version 1.0.0 (2026-08-24)
+
+Adapted from lossless-doc-compress version 0.1.0 by Valerii Babushkin and
+Arseny Kravchenko:
+https://github.com/ML-SystemDesign/MLSystemDesign/tree/8dd0d88852fe7445e9d2627c59124f0f161040c1/skills/lossless-doc-compress
+
+Pinned upstream commit: 8dd0d88852fe7445e9d2627c59124f0f161040c1
+
+Material changes include a qualified preservation claim, explicit-only
+invocation, risk-based refusal rules, broader protected-content controls,
+native-format routing, immutable-source handling, visible flags, a complete
+machine-readable edit manifest, deterministic bidirectional reconstruction,
+mechanical invariant checks, and independent human-approval gates. Marketing
+scorecards and unqualified lossless claims were removed.
+
+The license and this notice apply to the skill package, not to documents
+processed with it.

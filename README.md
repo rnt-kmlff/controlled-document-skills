@@ -19,7 +19,7 @@ This repository provides structure and a variety of design documents you can use
 │   │   └── EN/                      # English examples
 │   └── Mock/                        # Educational mock examples
 │       └── EN/                      # English mock examples
-├── skills/                          # Agent skills (ml-system-design-review)
+├── skills/                          # Agent skills
 ├── BookOutline.md                   # Book chapter summaries and key concepts
 ├── CONTRIBUTING.md                  # Contribution guidelines
 ├── LICENSE                          # MIT License
@@ -43,15 +43,15 @@ This repository provides structure and a variety of design documents you can use
    - [Retail Demand Forecasting](Design_Doc_Examples/Examples/EN/Retail_Demand_Forecasting_Design.md) — a real-world–inspired forecasting system.
    - [RAG Chat with Document Versions](Design_Doc_Examples/Mock/EN/RAG_Chat_With_Doc_Versions/RAG_Chat_With_Doc_Versions_Design.md) — an educational mock of a RAG system.
 
-## New: Agent Skill For Design Review
+## Agent Skills
 
-This repository now ships [`ml-system-design-review`](skills/README.md) — an agent skill that applies the book's framework to review ML/AI system designs: a verdict, a stage-aware gradecard, severity-ranked findings, and a prioritized fix plan for a design doc, a repo, or both.
+This repository ships several agent skills, documented in [`skills/README.md`](skills/README.md). This fork also adds [`controlled-doc-tighten`](skills/controlled-doc-tighten/SKILL.md), an explicit-only workflow for conservative document tightening with immutable sources, complete edit manifests, reversible text/Markdown changes, protected-content checks, and human approval gates.
 
 ```bash
-npx skills add ML-SystemDesign/MLSystemDesign
+npx skills add rnt-kmlff/controlled-document-skills
 ```
 
-See [`skills/README.md`](skills/README.md) for details and usage.
+See [`skills/README.md`](skills/README.md) for details and usage. Mechanical checks do not certify semantic equivalence, so high-stakes material remains review-only.
 
 ## Templates
 

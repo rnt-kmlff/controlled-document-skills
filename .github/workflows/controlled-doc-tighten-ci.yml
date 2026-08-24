@@ -1,0 +1,39 @@
+name: Controlled document tightening checks
+
+on:
+  pull_request:
+    paths:
+      - "skills/controlled-doc-tighten/**"
+      - "tests/controlled_doc_tighten/**"
+      - ".github/workflows/controlled-doc-tighten-ci.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "skills/controlled-doc-tighten/**"
+      - "tests/controlled_doc_tighten/**"
+      - ".github/workflows/controlled-doc-tighten-ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - "3.9"
+          - "3.12"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run validator and package tests
+        run: >-
+          python -B -m unittest discover
+          -s tests/controlled_doc_tighten
+          -p 'test_*.py'
+          -v
